@@ -15,19 +15,29 @@ To write a program to implement the the Logistic Regression Model to Predict the
 
 ## Program:
 /*
+
+"""
+Program to implement the Logistic Regression Model to predict the placement status of students
+Developed by:
+Register Number:
+"""
+# Program to implement the Logistic Regression Model to predict the Placement Status of Students
+# Developed by:
+# RegisterNumber:
+
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-
 # Suppose we have: CGPA, Aptitude Score, Communication Skill → Placement (1=Placed, 0=Not Placed)
+
 data = {
     'CGPA': [8.5, 6.8, 7.9, 5.4, 9.1, 8.0, 7.5, 6.0, 9.3, 5.8],
     'Aptitude_Score': [82, 55, 75, 48, 92, 77, 73, 50, 95, 45],
     'Communication_Skill': [8, 6, 7, 5, 9, 8, 7, 6, 9, 5],
-    'Placed': [1, 0, 1, 0, 1, 1, 1, 0, 1, 0]
+    'Placed': [1, 0, 1, 0, 1, 1, 1, 1, 1, 0]
 }
 
 df = pd.DataFrame(data)
@@ -36,38 +46,30 @@ print("Dataset:\n", df, "\n")
 X = df[['CGPA', 'Aptitude_Score', 'Communication_Skill']]
 y = df['Placed']
 
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-
 
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
 
-
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 print("Accuracy:", accuracy_score(y_test, y_pred))
 
-
-new_student = np.array([[8.2, 78, 8]])  # CGPA, Aptitude, Communication
+new_student = np.array([[8.2, 78, 8]])   # CGPA, Aptitude, Communication
 prediction = model.predict(new_student)
 
 print("\nNew Student Prediction:")
 if prediction[0] == 1:
-    print(" The student is likely to be PLACED.")
+    print("The student is likely to be PLACED.")
 else:
-    print(" The student is NOT likely to be placed.")
-```
+    print("The student is NOT likely to be placed.")
 
-Developed by: dhanalakshmi.c
-RegisterNumber:  25018616
-*/
+
 ```
 
 ## Output:
-<img width="767" height="595" alt="image" src="https://github.com/user-attachments/assets/cac05215-2058-45e2-8616-7effb59513cc" />
+<img width="513" height="574" alt="image" src="https://github.com/user-attachments/assets/51b01a6e-82c0-43c5-8288-34675dbef6f8" />
 
-## Result:
 Thus the program to implement the the Logistic Regression Model to Predict the Placement Status of Student is written and verified using python programming.
