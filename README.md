@@ -15,15 +15,9 @@ To write a program to implement the the Logistic Regression Model to Predict the
 
 ## Program:
 /*
-
-"""
-Program to implement the Logistic Regression Model to predict the placement status of students
-Developed by:
-Register Number:
-"""
 # Program to implement the Logistic Regression Model to predict the Placement Status of Students
-# Developed by:
-# RegisterNumber:
+# Developed by: Dhanalakshmi.C
+# RegisterNumber: 25A018616
 
 import numpy as np
 import pandas as pd
@@ -46,7 +40,9 @@ print("Dataset:\n", df, "\n")
 X = df[['CGPA', 'Aptitude_Score', 'Communication_Skill']]
 y = df['Placed']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42
+)
 
 model = LogisticRegression()
 model.fit(X_train, y_train)
@@ -67,9 +63,40 @@ else:
     print("The student is NOT likely to be placed.")
 
 
-```
 
-## Output:
-<img width="513" height="574" alt="image" src="https://github.com/user-attachments/assets/51b01a6e-82c0-43c5-8288-34675dbef6f8" />
+##output 
+dataset:
+   CGPA  Aptitude_Score  Communication_Skill  Placed
+0   8.5              82                    8       1
+1   6.8              55                    6       0
+2   7.9              75                    7       1
+3   5.4              48                    5       0
+4   9.1              92                    9       1
+5   8.0              77                    8       1
+6   7.5              73                    7       1
+7   6.0              50                    6       1
+8   9.3              95                    9       1
+9   5.8              45                    5       0
 
+
+Confusion Matrix:
+[[2 0]
+ [1 0]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.67      1.00      0.80         2
+           1       0.00      0.00      0.00         1
+
+    accuracy                           0.67         3
+   macro avg       0.33      0.50      0.40         3
+weighted avg       0.44      0.67      0.53         3
+
+Accuracy: 0.6666666666666666
+
+New Student Prediction:
+The student is likely to be PLACED.
+
+""
 Thus the program to implement the the Logistic Regression Model to Predict the Placement Status of Student is written and verified using python programming.
