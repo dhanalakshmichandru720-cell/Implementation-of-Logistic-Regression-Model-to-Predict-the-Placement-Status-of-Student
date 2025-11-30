@@ -14,6 +14,7 @@ To write a program to implement the the Logistic Regression Model to Predict the
 4. 
 
 ## Program:
+/*
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -59,7 +60,6 @@ if prediction[0] == 1:
 else:
     print(" The student is NOT likely to be placed.")
 ```
-/*
 
 Developed by: dhanalakshmi.c
 RegisterNumber:  25018616
