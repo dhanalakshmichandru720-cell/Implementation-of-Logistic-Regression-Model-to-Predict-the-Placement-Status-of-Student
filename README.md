@@ -14,6 +14,7 @@ To write a program to implement the the Logistic Regression Model to Predict the
 4. 
 
 ## Program:
+```
 /*
 Program to implement the the Logistic Regression Model to Predict the Placement Status of Student.
 Developed by: dhanalakhsmi
@@ -63,6 +64,7 @@ if prediction[0] == 1:
     print(" The student is likely to be PLACED.")
 else:
     print(" The student is NOT likely to be placed")
+```
 
 
 ##output 
